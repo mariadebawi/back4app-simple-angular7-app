@@ -1,0 +1,31 @@
+
+<div class="container" style="margin-top: 35px; text-align:center">
+  <div class="row">
+    <div class="col-sm-6">
+      <h1>Cars!</h1>
+    </div>
+    <div class="col-sm-4">
+      <div class="input">
+        <select [(ngModel)]="selectedValue" (ngModelChange)="onChange($event)">
+          <option *ngFor="let c of colors" [ngValue]="c">{{c.name}}</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container" style="margin-top: 50px">
+  <div class="row">
+    <div class="col-sm-12">
+      <h1>Results:</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-offset-8 col-sm-4">
+      <div class="input" *ngFor="let r of results">
+          <h1>{{r.name}} - {{r.color}}</h1>
+      </div>
+    </div>
+  </div>
+</div>
